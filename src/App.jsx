@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import './App.css';
-import { items } from './utils/items';
+import { items } from './utils/data';
 import { CardList } from './components/CardList';
 import { Wishlist } from './components/Wishlist';
 
@@ -18,7 +18,7 @@ function App() {
     }));
   };
 
-  const deleteToWishlist = (itemToRemove) => {
+  const deleteFromWishlist = (itemToRemove) => {
     setWishlist((prevItems) =>
       prevItems.filter((currentItem) => currentItem.id !== itemToRemove.id)
     );
@@ -38,7 +38,7 @@ function App() {
       />
       <Wishlist
         wishList={wishList}
-        deleteToWishlist={deleteToWishlist}
+        deleteFromWishlist={deleteFromWishlist}
       />
     </StoreBody>
   );

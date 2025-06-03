@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from './Button';
 
-export const WishItem = ({ item, deleteToWishlist }) => {
-  const handleDeleteToWishlist = () => {
-    deleteToWishlist(item);
+export const WishItem = ({ item, deleteFromWishlist }) => {
+  const handleDeleteFromWishlist = () => {
+    deleteFromWishlist(item);
   };
   return (
     <ItemContainer>
@@ -13,7 +12,7 @@ export const WishItem = ({ item, deleteToWishlist }) => {
       <span>{item.price}</span>
       <Button
         buttonTitle={'Delete'}
-        onClick={handleDeleteToWishlist}
+        onClick={handleDeleteFromWishlist}
       />
     </ItemContainer>
   );

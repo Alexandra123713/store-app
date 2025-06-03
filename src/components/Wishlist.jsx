@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { WishItem } from './WishItem';
 
-export const Wishlist = ({ wishList, deleteToWishlist }) => {
+export const Wishlist = ({ wishList, deleteFromWishlist }) => {
   return (
     <WishlistContainer>
       <h3>Wishlist</h3>
@@ -12,7 +12,7 @@ export const Wishlist = ({ wishList, deleteToWishlist }) => {
           <WishItem
             key={item.id}
             item={item}
-            deleteToWishlist={deleteToWishlist}
+            deleteFromWishlist={deleteFromWishlist}
           />
         ))
       )}
